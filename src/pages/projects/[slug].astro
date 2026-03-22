@@ -1,9 +1,10 @@
 ---
 import BaseLayout from '@layouts/BaseLayout.astro';
 import ProjectHero from '@components/project/ProjectHero.astro';
-import ImageBlock from '@components/project/ImageBlock.astro';
 import TextBlock from '@components/project/TextBlock.astro';
 import ProjectMeta from '@components/project/ProjectMeta.astro';
+import CoverImage from '@components/ui/CoverImage.astro';
+import 'glightbox/dist/css/glightbox.min.css';
 import { getCollection, render } from 'astro:content';
 
 export async function getStaticPaths() {
@@ -35,13 +36,15 @@ const { title, concept, coverImage, coverAlt, category, year, role, firm } = pro
     </TextBlock>
 
     <!-- Image gallery -->
-    {project.data.images && project.data.images.map((img, i) => (
-      <ImageBlock
-        src={img.src}
-        alt={img.alt}
-        wide={i % 3 === 0}
-      />
-    ))}
+    {project.data.images && (
+      <div class="px-8 max-w-5xl mx-auto my-12 grid grid-cols-1 sm:grid-cols-2 gap-2">
+        {project.data.images.map((img) => (
+          <a href={img.src} data-glightbox data-gallery="project" class="cursor-zoom-in">
+            <CoverImage src={img.src} alt={img.alt} aspect="4/3" />
+          </a>
+        ))}
+      </div>
+    )}
 
     <!-- Project meta footer -->
     <ProjectMeta
@@ -61,6 +64,9 @@ const { title, concept, coverImage, coverAlt, category, year, role, firm } = pro
 </BaseLayout>
 
 <script>
+  import GLightbox from 'glightbox';
+  GLightbox({ selector: '[data-glightbox]' });
+
   // Minimal parallax — passive scroll listener, ~15 lines, no library
   const parallaxEls = document.querySelectorAll<HTMLElement>('[data-parallax]');
   if (parallaxEls.length > 0) {
