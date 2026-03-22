@@ -37,3 +37,11 @@
 - baitong-hotel.md: synced images array to renamed files on disk (25 images, prefix-ordered 1_→6_), updated coverImage to `1_img-029.jpg`
 - Schema fix: `year` changed from `z.number()` to `z.union([z.number(), z.string()])` → supports both `2023` and `"2017-2019"` ranges
 - Fixed: project_status.md corrected — cover images were already wired for all 16 projects (stale "remaining" item removed)
+- Mobile navigation: added hamburger menu to SiteNav.astro
+  - Desktop: unchanged (horizontal links)
+  - Mobile: hamburger button → full-screen dark overlay (bg-black/65) with normal-sized links (font-sans text-sm uppercase)
+  - Hamburger animates to X on open; overlay fades in/out (0.3s CSS transition)
+  - Fixed: removed browser default button outline (border-none bg-transparent)
+  - Fixed: changed from solid canvas bg + huge serif text → semi-transparent dark bg + normal text (industry standard)
+- Git: created feature/phase-4-content branch, committed all project files (232 files), pushed to remote → Vercel preview deployed
+- .gitignore: added .DS_Store exclusion

@@ -37,6 +37,11 @@
 - baitong-hotel.md — images array synced to renamed files (25 images, prefix-ordered 1_→6_)
 - Content schema — `year` now accepts number or string (supports ranges like `2017-2019`)
 
+### Completed ✅ (continued)
+
+- Mobile hamburger menu — `SiteNav.astro` updated; full-screen dark overlay, normal-sized links, hamburger↔X animation
+- Git branch `feature/phase-4-content` pushed; Vercel preview deployed
+
 ### Remaining 🔄
 
 - Wire body images in `.md` files
