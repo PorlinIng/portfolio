@@ -41,10 +41,13 @@
 
 - Mobile hamburger menu — `SiteNav.astro` updated; full-screen dark overlay, normal-sized links, hamburger↔X animation
 - Git branch `feature/phase-4-content` pushed; Vercel preview deployed
+- Project detail gallery — replaced stacked layout with 2-column glightbox grid (`[slug].astro`)
+- images[] arrays — coverImage added as first entry across all 15 remaining project `.md` files
+- `BackToTop` component — created, added to `BaseLayout.astro` (appears on all pages after 400px scroll)
+- Home hero image — updated to real baitong hotel photo
 
 ### Remaining 🔄
 
-- Wire body images in `.md` files
 - Home page featured section (with type badges — deferred from projects page)
 - Contact page — real links (email, phone, FB, Instagram, Telegram)
 

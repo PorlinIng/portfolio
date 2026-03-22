@@ -44,4 +44,8 @@
   - Fixed: removed browser default button outline (border-none bg-transparent)
   - Fixed: changed from solid canvas bg + huge serif text → semi-transparent dark bg + normal text (industry standard)
 - Git: created feature/phase-4-content branch, committed all project files (232 files), pushed to remote → Vercel preview deployed
+- Project detail page gallery: replaced stacked ImageBlock layout with 2-column CSS grid + glightbox lightbox — low-res images look better at smaller sizes, click to enlarge
+- images[] arrays: added coverImage as first entry across all 15 remaining project .md files (modern-villa through vacation-house-2, provincial-gateway, shophouse, street-furniture)
+- BackToTop component: created `src/components/ui/BackToTop.astro` — added to BaseLayout so all pages get it; appears after 400px scroll, fades out near top
+- Home hero image: updated from placeholder (`portfolio_cover_kroma_tower.jpg`) to baitong hotel photo (`2_baitong_hotel/3_more_baitong-058.jpg`)
 - .gitignore: added .DS_Store exclusion
