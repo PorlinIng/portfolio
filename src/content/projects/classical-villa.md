@@ -7,11 +7,18 @@ role: "Designer"
 concept: "European classical proportions rendered for a luxury private residence — arched entrance, ornamental columns, and refined symmetry."
 coverImage: "/images/3_exterior/classical_villa/img-048.jpg"
 coverAlt: "Classical Villa exterior render with ornamental columns and arch"
-featured: true
+featured: false
 hasGreenery: false
 order: 3
 images:
-  - { src: "/images/3_exterior/classical_villa/img-049.jpg", alt: "Classical Villa — side view" }
+  - {
+      src: "/images/3_exterior/classical_villa/img-048.jpg",
+      alt: "Classical Villa — front view",
+    }
+  - {
+      src: "/images/3_exterior/classical_villa/img-049.jpg",
+      alt: "Classical Villa — side view",
+    }
 ---
 
 A 3D exterior visualisation for a private luxury residence drawing from European classical architecture. The composition is anchored by a grand arched entrance framed by Corinthian-style pilasters, a second-floor balcony with ornamental balustrades, and symmetrical facade panels with circular motifs.

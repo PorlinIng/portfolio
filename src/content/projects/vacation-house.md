@@ -11,6 +11,7 @@ featured: false
 hasGreenery: true
 order: 5
 images:
+  - { src: "/images/3_exterior/vacation_house_1/img-052.jpg", alt: "Vacation House — pool elevation" }
   - { src: "/images/3_exterior/vacation_house_1/img-053.jpg", alt: "Vacation House — garden view" }
 ---
 

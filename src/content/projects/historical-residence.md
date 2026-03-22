@@ -7,14 +7,30 @@ role: "Lead Designer"
 concept: "Conserving 1960s Khmer modernism through a compact 'Extra Box' insertion that transforms between study and sleeping space using a dynamic sliding skin."
 coverImage: "/images/7_architectural_competition_project_historical_residence_renovation/4-1_hrr_3d_rendering.jpg"
 coverAlt: "Historical Residence Renovation — Extra Box addition to Vann Molyvann-era housing"
-featured: false
+featured: true
 hasGreenery: false
 order: 11
 images:
-  - { src: "/images/7_architectural_competition_project_historical_residence_renovation/1_hrr_location_and_history_board.jpg", alt: "Historical Residence — location and history board" }
-  - { src: "/images/7_architectural_competition_project_historical_residence_renovation/2_hrr_concept_description.jpg", alt: "Historical Residence — concept description" }
-  - { src: "/images/7_architectural_competition_project_historical_residence_renovation/3_hrr_master_plan_design.jpg", alt: "Historical Residence — master plan design" }
-  - { src: "/images/7_architectural_competition_project_historical_residence_renovation/4_hrr_architecture_plans.jpg", alt: "Historical Residence — architecture plans" }
+  - {
+      src: "/images/7_architectural_competition_project_historical_residence_renovation/1_hrr_location_and_history_board.jpg",
+      alt: "Historical Residence — location and history board",
+    }
+  - {
+      src: "/images/7_architectural_competition_project_historical_residence_renovation/2_hrr_concept_description.jpg",
+      alt: "Historical Residence — concept description",
+    }
+  - {
+      src: "/images/7_architectural_competition_project_historical_residence_renovation/3_hrr_master_plan_design.jpg",
+      alt: "Historical Residence — master plan design",
+    }
+  - {
+      src: "/images/7_architectural_competition_project_historical_residence_renovation/4_hrr_architecture_plans.jpg",
+      alt: "Historical Residence — architecture plans",
+    }
+  - {
+      src: "/images/7_architectural_competition_project_historical_residence_renovation/4-1_hrr_3d_rendering.jpg",
+      alt: "Historical Residence — 3d rendering",
+    }
 ---
 
 **Architectural Competition Entry, 2019**
@@ -26,15 +42,18 @@ In 1967, the National Bank of Cambodia commissioned affordable housing so employ
 
 **Design Approach**
 Rather than wholesale replacement, the proposal conserves the original Vann Molyvann structure and inserts a compact **"Extra Box"** addition — just 18m² — into the living area on the first floor. The Extra Box is a multifunctional space that transforms between uses:
+
 - **Daytime:** Open living and study space with dynamic skin open
 - **Night:** Three private sleeping zones using sliding doors — daughter's bedroom, son's bedroom, and guest room
 
 **The Dynamic Skin System**
 The Extra Box has two skins working together:
+
 1. **Glass skin** — fixed outer layer for enclosure
 2. **Dynamic skin** — sliding screen that can open fully, close partially, or close fully, controlling privacy, shading, and spatial configuration
 
 **Site & Programme**
+
 - Plot: 16m Wide × 27m Long
 - Existing house: 6.7m Wide × 10.9m Long (Ground Floor, First Floor, Roof)
 - Target family: 4 people — parents + 5-year-old daughter + 7-year-old son

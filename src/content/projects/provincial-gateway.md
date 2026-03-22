@@ -11,6 +11,7 @@ featured: true
 hasGreenery: true
 order: 9
 images:
+  - { src: "/images/5_architectural_competition_project_provincial_gateway/5_pg_bird_eye_view.jpg", alt: "Provincial Gateway — aerial render" }
   - { src: "/images/5_architectural_competition_project_provincial_gateway/1_pg_project_description_board.jpg", alt: "Provincial Gateway — project description board" }
   - { src: "/images/5_architectural_competition_project_provincial_gateway/2_pg_concept_idea_board.jpg", alt: "Provincial Gateway — concept idea board" }
   - { src: "/images/5_architectural_competition_project_provincial_gateway/2-1_pg_concept_model.jpg", alt: "Provincial Gateway — concept model" }

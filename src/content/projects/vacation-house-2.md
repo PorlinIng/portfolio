@@ -11,6 +11,7 @@ featured: false
 hasGreenery: true
 order: 16
 images:
+  - { src: "/images/3_exterior/vacation_house_2/img-054.jpg", alt: "Vacation House II — view 1" }
   - { src: "/images/3_exterior/vacation_house_2/img-055.jpg", alt: "Vacation House II — view 2" }
 ---
 

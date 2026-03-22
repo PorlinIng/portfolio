@@ -11,6 +11,7 @@ featured: false
 hasGreenery: false
 order: 12
 images:
+  - { src: "/images/8_architectural_competition_project_street_furniture_design/1_sfd_PPCC_street_furniture_design_concept_design.jpg", alt: "Street Furniture — Palm Hat Station concept" }
   - { src: "/images/8_architectural_competition_project_street_furniture_design/1-1_sfd_PPCC_street_furniture_design_facility.jpg", alt: "Street Furniture — facility design" }
   - { src: "/images/8_architectural_competition_project_street_furniture_design/2_sfd_bus_stop_design.jpg", alt: "Street Furniture — bus stop design" }
 ---

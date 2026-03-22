@@ -7,17 +7,42 @@ role: "Designer"
 concept: "Two shophouse exterior design proposals reimagining the urban terrace typology through timber screens, stacked volumes, and contemporary rhythm."
 coverImage: "/images/3_exterior/shophouse/img-058.jpg"
 coverAlt: "Shophouse proposal exterior render — City Frame scheme"
-featured: false
+featured: true
 hasGreenery: true
 order: 6
 images:
-  - { src: "/images/3_exterior/shophouse/img-059.jpg", alt: "Shophouse — street view" }
-  - { src: "/images/3_exterior/shophouse/img-060.jpg", alt: "Shophouse — elevation" }
-  - { src: "/images/4_interior/shophouse_interior/ID_Shophouse_living.png", alt: "Shophouse — living room interior" }
-  - { src: "/images/4_interior/shophouse_interior/ID_Shophouse_family_01.png", alt: "Shophouse — family room" }
-  - { src: "/images/4_interior/shophouse_interior/ID_Shophouse_family_02.png", alt: "Shophouse — family room view 2" }
-  - { src: "/images/4_interior/shophouse_interior/ID_Shophouse_family_03.png", alt: "Shophouse — family room view 3" }
-  - { src: "/images/4_interior/shophouse_interior/ID_Shophouse_dining_kitchen.png", alt: "Shophouse — dining and kitchen" }
+  - {
+      src: "/images/3_exterior/shophouse/img-058.jpg",
+      alt: "Shophouse — City Frame scheme",
+    }
+  - {
+      src: "/images/3_exterior/shophouse/img-059.jpg",
+      alt: "Shophouse — street view",
+    }
+  - {
+      src: "/images/3_exterior/shophouse/img-060.jpg",
+      alt: "Shophouse — elevation",
+    }
+  - {
+      src: "/images/4_interior/shophouse_interior/ID_Shophouse_living.png",
+      alt: "Shophouse — living room interior",
+    }
+  - {
+      src: "/images/4_interior/shophouse_interior/ID_Shophouse_family_01.png",
+      alt: "Shophouse — family room",
+    }
+  - {
+      src: "/images/4_interior/shophouse_interior/ID_Shophouse_family_02.png",
+      alt: "Shophouse — family room view 2",
+    }
+  - {
+      src: "/images/4_interior/shophouse_interior/ID_Shophouse_family_03.png",
+      alt: "Shophouse — family room view 3",
+    }
+  - {
+      src: "/images/4_interior/shophouse_interior/ID_Shophouse_dining_kitchen.png",
+      alt: "Shophouse — dining and kitchen",
+    }
 ---
 
 Two shophouse exterior design proposals exploring contemporary interpretations of the traditional Southeast Asian shophouse form.

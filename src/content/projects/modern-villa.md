@@ -11,6 +11,7 @@ featured: false
 hasGreenery: true
 order: 4
 images:
+  - { src: "/images/3_exterior/modern_villa_1/img-050.jpg", alt: "Modern Villa — front facade" }
   - { src: "/images/3_exterior/modern_villa_1/img-051.jpg", alt: "Modern Villa — rear terrace" }
 ---
 

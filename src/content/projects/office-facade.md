@@ -11,6 +11,7 @@ featured: false
 hasGreenery: true
 order: 2
 images:
+  - { src: "/images/3_exterior/office_building_1/img-040.jpg", alt: "Office Building — facade view 1" }
   - { src: "/images/3_exterior/office_building_1/img-041.jpg", alt: "Office Building — facade view 2" }
   - { src: "/images/3_exterior/office_building_1/img-042.jpg", alt: "Office Building — facade view 3" }
 ---
