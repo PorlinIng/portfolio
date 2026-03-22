@@ -1,0 +1,28 @@
+---
+interface Props {
+  title: string;
+  concept: string;
+  coverImage: string;
+  coverAlt: string;
+}
+
+const { title, concept, coverImage, coverAlt } = Astro.props;
+---
+
+<section class="relative h-[70vh] w-full overflow-hidden">
+  <img
+    src={coverImage}
+    alt={coverAlt}
+    class="w-full h-full object-cover"
+  />
+  <div class="absolute inset-0 bg-gradient-to-t from-ink/60 via-ink/20 to-transparent"></div>
+
+  <div class="absolute bottom-12 left-12 right-12 text-canvas">
+    <h1 class="font-serif font-light text-5xl md:text-7xl leading-tight mb-4">
+      {title}
+    </h1>
+    <p class="font-serif italic text-xl text-canvas/80 max-w-xl">
+      {concept}
+    </p>
+  </div>
+</section>

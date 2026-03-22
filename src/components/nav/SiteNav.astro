@@ -1,0 +1,42 @@
+---
+interface Props {
+  transparent?: boolean;
+}
+const { transparent = false } = Astro.props;
+const navLinks = [
+  { href: '/projects', label: 'Projects' },
+  { href: '/sketches', label: 'Sketches' },
+  { href: '/about', label: 'About' },
+  { href: '/contact', label: 'Contact' },
+];
+const currentPath = Astro.url.pathname;
+---
+
+<nav class:list={[
+  'fixed top-0 left-0 right-0 z-50 flex items-center justify-between px-8 py-6 transition-colors duration-300',
+  transparent ? 'bg-transparent' : 'bg-canvas border-b border-concrete/20',
+]}>
+  <a href="/" class:list={[
+    'font-serif text-xl tracking-widest uppercase',
+    transparent ? 'text-canvas' : 'text-ink',
+  ]}>
+    Porlin
+  </a>
+
+  <ul class="flex items-center gap-8">
+    {navLinks.map(({ href, label }) => (
+      <li>
+        <a
+          href={href}
+          class:list={[
+            'font-sans text-xs uppercase tracking-widest transition-colors duration-200',
+            transparent ? 'text-canvas/80 hover:text-canvas' : 'text-concrete hover:text-ink',
+            currentPath.startsWith(href) ? (transparent ? 'text-canvas' : 'text-ink') : '',
+          ]}
+        >
+          {label}
+        </a>
+      </li>
+    ))}
+  </ul>
+</nav>

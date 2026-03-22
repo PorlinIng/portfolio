@@ -1,0 +1,109 @@
+---
+import 'glightbox/dist/css/glightbox.min.css';
+import SectionHeading from '@components/ui/SectionHeading.astro';
+import CoverImage from '@components/ui/CoverImage.astro';
+
+const categories = [
+  {
+    label: 'Building Exterior',
+    folder: '/images/1_sketches/building_exterior',
+    sketches: [
+      { src: 'img-005.jpg', ai: ['img-005_ai_generated.jpg', 'img-005_ai_generated_dark.jpg'] },
+      { src: 'img-006.jpg', ai: ['img-006_ai_generated.jpg', 'img-006_ai_generated_dark.jpg'] },
+      { src: 'img-007.jpg', ai: ['img-007_ai_generated.jpg', 'img-007_ai_generated_dark.jpg'] },
+      { src: 'img-008.jpg', ai: [] },
+      { src: 'img-009.jpg', ai: [] },
+      { src: 'img-010.jpg', ai: [] },
+      { src: 'img-011.jpg', ai: ['img-011_ai_generated.jpg'] },
+      { src: 'img-012.jpg', ai: ['img-012_ai_generated.jpg'] },
+      { src: 'img-013.jpg', ai: ['img-013_ai_generated.jpg', 'img-013_ai_generated_dark.jpg'] },
+      { src: 'img-015.jpg', ai: ['img-015_ai_generated.jpg'] },
+      { src: 'img-017.jpg', ai: ['img-017_ai_generated.jpg'] },
+      { src: 'img-021.jpg', ai: ['img-021_ai_generated.jpg'] },
+      { src: 'img-024.jpg', ai: ['img-024_ai_generated.jpg', 'img-024_ai_generated_dark.jpg'] },
+      { src: 'img-027.jpg', ai: ['img-027_ai_generated.jpg', 'img-027_ai_generated_dark.jpg'] },
+    ],
+  },
+  {
+    label: 'Pavilion',
+    folder: '/images/1_sketches/pavilion',
+    sketches: [
+      { src: 'img-014.jpg', ai: ['img-014_ai_generated.jpg', 'img-014_ai_generated_2.jpg'] },
+      { src: 'img-016.jpg', ai: ['img-016_ai_generated.jpg'] },
+    ],
+  },
+  {
+    label: 'Sculpture',
+    folder: '/images/1_sketches/sculpture',
+    sketches: [
+      { src: 'img-018.jpg', ai: ['img-018_ai_generated.jpg'] },
+      { src: 'img-019_khmer_ornament.jpg', ai: ['img-019_khmer_ornament_ai_generated.jpg'] },
+      { src: 'img-020.jpg', ai: ['img-020_ai_generated.jpg'] },
+      { src: 'img-023.jpeg', ai: ['img-023_ai_generated.jpg'] },
+      { src: 'img-025_khmer_ornament.jpg', ai: ['img-025_khmer_ornament_ai_generated.jpg'] },
+      { src: 'img-026_sculpture.jpg', ai: ['img-026_sculpture_ai_generated.jpg'] },
+    ],
+  },
+  {
+    label: 'Others',
+    folder: '/images/1_sketches/others_design',
+    sketches: [
+      { src: 'img-022_fashion_design.jpg', ai: ['img-022_fashion_design_ai_generated.jpg'] },
+      { src: 'img-028_motorbike.jpg', ai: ['img-028_motorbike_ai_generated.jpg'] },
+    ],
+  },
+];
+---
+
+<div class="px-8 pb-24 space-y-16">
+  {categories.map(({ label, folder, sketches }) => (
+    <section>
+      <SectionHeading>{label}</SectionHeading>
+
+      <div class="flex flex-wrap gap-10">
+        {sketches.map(({ src, ai }) => (
+          <div class="flex flex-wrap sm:flex-nowrap gap-[3px] w-full sm:w-auto border-t border-concrete/30 pt-4">
+
+            <!-- Original sketch -->
+            <a
+              href={`${folder}/${src}`}
+              data-glightbox
+              data-gallery={label}
+              class="block w-full sm:w-[35vw] md:w-[30vw] shrink-0 cursor-zoom-in"
+            >
+              <CoverImage
+                src={`${folder}/${src}`}
+                alt="Sketch"
+                aspect="4/3"
+                bg="bg-[#E0DBD0]"
+              />
+            </a>
+
+            <!-- AI generated images (0, 1, or 2) -->
+            {ai.map((aiSrc) => (
+              <a
+                href={`${folder}/${aiSrc}`}
+                data-glightbox
+                data-gallery={label}
+                class="block w-full sm:w-[35vw] md:w-[30vw] shrink-0 cursor-zoom-in"
+              >
+                <CoverImage
+                  src={`${folder}/${aiSrc}`}
+                  alt="AI interpretation"
+                  aspect="4/3"
+                  bg="bg-[#E0DBD0]"
+                />
+              </a>
+            ))}
+
+          </div>
+        ))}
+      </div>
+    </section>
+  ))}
+</div>
+
+<script>
+  import GLightbox from 'glightbox';
+  GLightbox({ selector: '[data-glightbox]' });
+</script>

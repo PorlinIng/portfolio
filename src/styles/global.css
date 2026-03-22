@@ -1,0 +1,50 @@
+@import '@fontsource/cormorant-garamond/300.css';
+@import '@fontsource/cormorant-garamond/400.css';
+@import '@fontsource/cormorant-garamond/600.css';
+@import '@fontsource/cormorant-garamond/400-italic.css';
+@import '@fontsource/inter/400.css';
+@import '@fontsource/inter/500.css';
+
+@import "tailwindcss";
+
+@theme {
+  --color-canvas:   #F7F4EF;
+  --color-ink:      #1C1C1A;
+  --color-timber:   #C4A067;
+  --color-concrete: #8C8C7A;
+  --color-sage:     #A8B5A0;
+
+  --font-family-serif: 'Cormorant Garamond', serif;
+  --font-family-sans:  'Inter', sans-serif;
+}
+
+/* Base defaults */
+body {
+  background-color: #F7F4EF;
+  color: #1C1C1A;
+  font-family: 'Inter', sans-serif;
+}
+
+h1, h2, h3, h4 {
+  font-family: 'Cormorant Garamond', serif;
+}
+
+/* Page transition */
+@keyframes fadeIn {
+  from { opacity: 0; transform: translateY(6px); }
+  to   { opacity: 1; transform: translateY(0); }
+}
+
+.page-fade {
+  animation: fadeIn 0.4s ease-in-out;
+}
+
+/* Project card hover overlay */
+.project-card-overlay {
+  opacity: 0;
+  transition: opacity 400ms ease;
+}
+
+.project-card:hover .project-card-overlay {
+  opacity: 1;
+}

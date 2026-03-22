@@ -1,0 +1,51 @@
+---
+/**
+ * CoverImage — reusable fixed-aspect-ratio image container.
+ *
+ * ALWAYS use this component for any fixed-ratio image on any page.
+ * NEVER hardcode aspect ratio + overflow + object-cover inline — that's how inconsistency creeps in.
+ *
+ * Usage:
+ *   import CoverImage from '@components/ui/CoverImage.astro';
+ *   <CoverImage src="/images/foo.jpg" alt="Description" />
+ *   <CoverImage src="/images/foo.jpg" alt="Description" aspect="1/1" />
+ *   <CoverImage src="/images/foo.jpg" alt="Description" aspect="16/9" />
+ *
+ * Props:
+ *   src     — image path (required)
+ *   alt     — alt text (required)
+ *   aspect  — CSS aspect-ratio value, e.g. "4/3", "1/1", "16/9" (default: "4/3") — applied via inline style, not Tailwind
+ *   class   — extra classes on the wrapper (optional)
+ *   loading — "lazy" | "eager" (default: "lazy")
+ */
+
+interface Props {
+  src: string;
+  alt: string;
+  aspect?: string;
+  bg?: string;
+  class?: string;
+  imgClass?: string;
+  loading?: 'lazy' | 'eager';
+}
+
+const {
+  src,
+  alt,
+  aspect = '4/3',
+  bg = 'bg-concrete/20',
+  class: className = '',
+  imgClass = '',
+  loading = 'lazy',
+} = Astro.props;
+---
+
+<div style={`aspect-ratio: ${aspect};`} class={`relative overflow-hidden ${bg} ${className}`}>
+  <img
+    src={src}
+    alt={alt}
+    loading={loading}
+    class={`w-full h-full object-cover ${imgClass}`}
+  />
+  <slot />
+</div>

@@ -1,0 +1,32 @@
+---
+// Hero: full-screen with placeholder image background
+// Name + tagline positioned bottom-left
+---
+
+<section class="relative h-screen w-full overflow-hidden">
+  <!-- Placeholder hero background -->
+  <div class="absolute inset-0 bg-ink/10">
+    <img
+      src="/images/portfolio_cover_kroma_tower.jpg"
+      alt="Porlin architecture"
+      class="w-full h-full object-cover"
+    />
+    <!-- Gradient overlay for text legibility -->
+    <div class="absolute inset-0 bg-gradient-to-t from-ink/70 via-transparent to-transparent"></div>
+  </div>
+
+  <!-- Name + tagline -->
+  <div class="absolute bottom-12 left-12 text-canvas">
+    <h1 class="font-serif font-light text-6xl md:text-8xl tracking-wide leading-none mb-4">
+      Porlin
+    </h1>
+    <p class="font-serif italic font-light text-xl md:text-2xl text-canvas/80">
+      Architecture &amp; Design
+    </p>
+  </div>
+
+  <!-- Scroll hint -->
+  <div class="absolute bottom-8 right-12 text-canvas/60">
+    <span class="font-sans text-xs uppercase tracking-widest">Scroll</span>
+  </div>
+</section>

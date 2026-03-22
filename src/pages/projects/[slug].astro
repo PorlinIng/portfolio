@@ -1,0 +1,76 @@
+---
+import BaseLayout from '@layouts/BaseLayout.astro';
+import ProjectHero from '@components/project/ProjectHero.astro';
+import ImageBlock from '@components/project/ImageBlock.astro';
+import TextBlock from '@components/project/TextBlock.astro';
+import ProjectMeta from '@components/project/ProjectMeta.astro';
+import { getCollection, render } from 'astro:content';
+
+export async function getStaticPaths() {
+  const projects = await getCollection('projects');
+  return projects.map((project) => ({
+    params: { slug: project.slug },
+    props: { project },
+  }));
+}
+
+const { project } = Astro.props;
+const { Content } = await render(project);
+const { title, concept, coverImage, coverAlt, category, year, role, firm } = project.data;
+---
+
+<BaseLayout title={title} description={concept}>
+  <!-- Project hero -->
+  <ProjectHero
+    title={title}
+    concept={concept}
+    coverImage={coverImage}
+    coverAlt={coverAlt}
+  />
+
+  <!-- Project body -->
+  <article class="pt-16">
+    <TextBlock>
+      <Content />
+    </TextBlock>
+
+    <!-- Image gallery -->
+    {project.data.images && project.data.images.map((img, i) => (
+      <ImageBlock
+        src={img.src}
+        alt={img.alt}
+        wide={i % 3 === 0}
+      />
+    ))}
+
+    <!-- Project meta footer -->
+    <ProjectMeta
+      category={category}
+      year={year}
+      role={role}
+      firm={firm}
+    />
+  </article>
+
+  <!-- Back link -->
+  <div class="px-8 py-12 max-w-4xl mx-auto">
+    <a href="/projects" class="font-sans text-xs uppercase tracking-widest text-concrete hover:text-ink transition-colors duration-200">
+      ← All Projects
+    </a>
+  </div>
+</BaseLayout>
+
+<script>
+  // Minimal parallax — passive scroll listener, ~15 lines, no library
+  const parallaxEls = document.querySelectorAll<HTMLElement>('[data-parallax]');
+  if (parallaxEls.length > 0) {
+    window.addEventListener('scroll', () => {
+      const scrollY = window.scrollY;
+      parallaxEls.forEach((el) => {
+        const rect = el.getBoundingClientRect();
+        const offsetY = (rect.top + scrollY - window.innerHeight / 2) * 0.08;
+        el.style.transform = `translateY(${offsetY}px)`;
+      });
+    }, { passive: true });
+  }
+</script>
