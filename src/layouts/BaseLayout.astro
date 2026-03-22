@@ -1,6 +1,7 @@
 ---
 import '../styles/global.css';
 import SiteNav from '@components/nav/SiteNav.astro';
+import BackToTop from '@components/ui/BackToTop.astro';
 
 interface Props {
   title: string;
@@ -29,6 +30,7 @@ const {
     <main class="page-fade">
       <slot />
     </main>
+    <BackToTop />
     <footer class="border-t border-concrete/20 px-8 py-6 mt-24">
       <p class="font-sans text-xs text-concrete tracking-widest text-center uppercase">
         © {new Date().getFullYear()} Porlin. All rights reserved.
