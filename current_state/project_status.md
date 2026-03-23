@@ -1,6 +1,6 @@
 # Project Status — Porlin Portfolio Website
 
-**Last updated:** 2026-03-22
+**Last updated:** 2026-03-23
 
 ---
 
@@ -46,10 +46,16 @@
 - `BackToTop` component — created, added to `BaseLayout.astro` (appears on all pages after 400px scroll)
 - Home hero image — updated to real baitong hotel photo
 
+### Completed ✅ (continued)
+
+- GitHub Actions workflow — triggers on push to `development`, builds with Bun, deploys to `gh-pages`
+- `astro.config.mjs` — conditional `base`/`site` for GitHub Pages vs Vercel (uses `GITHUB_ACTIONS` env var)
+- Staging URL: https://PorlinIng.github.io/portfolio/
+
 ### Remaining 🔄
 
-- Home page featured section (with type badges — deferred from projects page)
-- Contact page — real links (email, phone, FB, Instagram, Telegram)
+- Waiting for Porlin to fact-check all project details (descriptions, year, role, firm, etc.)
+- Waiting for Porlin to review all images per project — keep, replace, or remove
 
 ---
 
@@ -95,14 +101,9 @@ See `CLAUDE.md` for full usage docs.
 
 ## Next Step
 
-Wire real images per project — check `public/images/` subfolders and update `coverImage` fields in `.md` files.
-
-Image folders available:
-- `commercial-building/` — Project_01–07.JPG
-- `provincial-gateway/` — Project_08–13.JPG
-- `interior-design/` — 14 render files
-- `shophouse/` — ID_Shophouse_01–05.png
-- `extracted/` — subdirs: 2_baitong, 3_exterior, 4_interior, 5_provincial_gateway, 6_commercial_building, 7_historical_residence_renovation, 8_street_furniture_design
+Blocked — waiting for Porlin's review:
+- Fact-check all project details (title, year, role, description, firm)
+- Review images per project — decide what to keep, replace, or remove
 
 ---
 

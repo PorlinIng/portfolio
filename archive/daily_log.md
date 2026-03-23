@@ -49,3 +49,17 @@
 - BackToTop component: created `src/components/ui/BackToTop.astro` — added to BaseLayout so all pages get it; appears after 400px scroll, fades out near top
 - Home hero image: updated from placeholder (`portfolio_cover_kroma_tower.jpg`) to baitong hotel photo (`2_baitong_hotel/3_more_baitong-058.jpg`)
 - .gitignore: added .DS_Store exclusion
+
+## 2026-03-23
+
+- GitHub Actions deploy workflow created → `.github/workflows/deploy.yml`
+  - Triggers on push to `development`
+  - Builds with Bun, deploys `dist/` to `gh-pages` branch
+  - GitHub Pages points to `gh-pages` branch
+- `astro.config.mjs` updated — conditional `site` + `base` using `GITHUB_ACTIONS` env var
+  - GitHub Pages build: `site=https://PorlinIng.github.io`, `base=/portfolio`
+  - Vercel build: unchanged (`site=https://porlin.vercel.app`, `base=/`)
+- Staging URL: https://PorlinIng.github.io/portfolio/
+- Contact page real links confirmed already wired — removed from Remaining
+- Home page featured section type badges — dropped (not needed)
+- Phase 4 now blocked on Porlin's review: fact-check project details (title, year, role, description) + image review (keep, replace, or remove) per project
