@@ -3,6 +3,8 @@ import 'glightbox/dist/css/glightbox.min.css';
 import SectionHeading from '@components/ui/SectionHeading.astro';
 import CoverImage from '@components/ui/CoverImage.astro';
 
+const base = import.meta.env.BASE_URL.replace(/\/?$/, '/');
+
 const categories = [
   {
     label: 'Building Exterior',
@@ -66,7 +68,7 @@ const categories = [
 
             <!-- Original sketch -->
             <a
-              href={`${folder}/${src}`}
+              href={`${base}${folder.slice(1)}/${src}`}
               data-glightbox
               data-gallery={label}
               class="block w-full sm:w-[35vw] md:w-[30vw] shrink-0 cursor-zoom-in"
@@ -82,7 +84,7 @@ const categories = [
             <!-- AI generated images (0, 1, or 2) -->
             {ai.map((aiSrc) => (
               <a
-                href={`${folder}/${aiSrc}`}
+                href={`${base}${folder.slice(1)}/${aiSrc}`}
                 data-glightbox
                 data-gallery={label}
                 class="block w-full sm:w-[35vw] md:w-[30vw] shrink-0 cursor-zoom-in"
