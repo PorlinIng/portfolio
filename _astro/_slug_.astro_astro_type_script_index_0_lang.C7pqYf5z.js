@@ -1,0 +1,1 @@
+import{G as r}from"./glightbox.min.Dqk6yVvt.js";r({selector:"[data-glightbox]"});const o=document.querySelectorAll("[data-parallax]");o.length>0&&window.addEventListener("scroll",()=>{const e=window.scrollY;o.forEach(t=>{const l=(t.getBoundingClientRect().top+e-window.innerHeight/2)*.08;t.style.transform=`translateY(${l}px)`})},{passive:!0});
