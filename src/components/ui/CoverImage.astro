@@ -38,11 +38,14 @@ const {
   imgClass = '',
   loading = 'lazy',
 } = Astro.props;
+
+const base = import.meta.env.BASE_URL;
+const finalSrc = src.startsWith('/') ? base + src.slice(1) : src;
 ---
 
 <div style={`aspect-ratio: ${aspect};`} class={`relative overflow-hidden ${bg} ${className}`}>
   <img
-    src={src}
+    src={finalSrc}
     alt={alt}
     loading={loading}
     class={`w-full h-full object-cover ${imgClass}`}

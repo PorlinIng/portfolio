@@ -22,7 +22,7 @@ const featured = allProjects.filter((p) => p.data.featured);
       </h2>
       <ProjectGrid projects={featured} />
       <div class="mt-8 text-center">
-        <a href="/projects" class="font-sans text-xs uppercase tracking-widest text-concrete hover:text-ink transition-colors duration-200 border-b border-concrete/40 pb-0.5">
+        <a href={`${import.meta.env.BASE_URL}projects`} class="font-sans text-xs uppercase tracking-widest text-concrete hover:text-ink transition-colors duration-200 border-b border-concrete/40 pb-0.5">
           View All Projects
         </a>
       </div>
