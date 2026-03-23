@@ -39,7 +39,7 @@ const {
   loading = 'lazy',
 } = Astro.props;
 
-const base = import.meta.env.BASE_URL;
+const base = import.meta.env.BASE_URL.replace(/\/?$/, '/');
 const finalSrc = src.startsWith('/') ? base + src.slice(1) : src;
 ---
 

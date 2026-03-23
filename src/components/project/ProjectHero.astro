@@ -7,7 +7,7 @@ interface Props {
 }
 
 const { title, concept, coverImage, coverAlt } = Astro.props;
-const base = import.meta.env.BASE_URL;
+const base = import.meta.env.BASE_URL.replace(/\/?$/, '/');
 const heroSrc = coverImage.startsWith('/') ? base + coverImage.slice(1) : coverImage;
 ---
 
