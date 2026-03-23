@@ -11,9 +11,10 @@ interface Props {
 }
 
 const { slug, title, category, year, coverImage, coverAlt } = Astro.props;
+const base = import.meta.env.BASE_URL;
 ---
 
-<a href={`/projects/${slug}`} class="project-card group block">
+<a href={`${base}projects/${slug}`} class="project-card group block">
   <CoverImage src={coverImage} alt={coverAlt} imgClass="transition-transform duration-700 group-hover:scale-105">
     <!-- Hover overlay -->
     <div class="project-card-overlay absolute inset-0 bg-ink/60 flex flex-col justify-end p-6">

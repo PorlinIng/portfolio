@@ -3,11 +3,12 @@ interface Props {
   transparent?: boolean;
 }
 const { transparent = false } = Astro.props;
+const base = import.meta.env.BASE_URL;
 const navLinks = [
-  { href: '/projects', label: 'Projects' },
-  { href: '/sketches', label: 'Sketches' },
-  { href: '/about', label: 'About' },
-  { href: '/contact', label: 'Contact' },
+  { href: `${base}projects`, label: 'Projects' },
+  { href: `${base}sketches`, label: 'Sketches' },
+  { href: `${base}about`, label: 'About' },
+  { href: `${base}contact`, label: 'Contact' },
 ];
 const currentPath = Astro.url.pathname;
 ---
@@ -16,7 +17,7 @@ const currentPath = Astro.url.pathname;
   'fixed top-0 left-0 right-0 z-50 flex items-center justify-between px-8 py-6 transition-colors duration-300',
   transparent ? 'bg-transparent' : 'bg-canvas border-b border-concrete/20',
 ]}>
-  <a href="/" class:list={[
+  <a href={base} class:list={[
     'font-serif text-xl tracking-widest uppercase',
     transparent ? 'text-canvas' : 'text-ink',
   ]}>
