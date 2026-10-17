@@ -197,9 +197,9 @@ PROJECT.md
 .claude/
 .vscode/
 
-# Everything inside `archive` except `daily_log.md`
-archive/*
-!archive/daily_log.md
+# Private project state: symlinks into Google Drive (no trailing slash: git sees a symlink as a file)
+/archive
+/current_state
 
 # Microservice credentials (sensitive)
 services/credentials/*.json
@@ -233,9 +233,10 @@ frontend-widget/node_modules/
 
 # Astro
 node_modules/
-.astro/
 bun.lockb
 .vercel
+# regenerable: bun run astro sync
+.astro/
 
 # macOS
 .DS_Store
